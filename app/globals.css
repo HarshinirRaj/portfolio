@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 247 249;
+  --surface: 255 255 255;
+  --surface-2: 238 240 244;
+  --border: 227 231 238;
+  --text: 16 20 28;
+  --text-muted: 91 100 114;
+  --grid-line: rgba(16, 20, 28, 0.05);
+}
+
+.dark {
+  --bg: 10 14 20;
+  --surface: 15 21 32;
+  --surface-2: 22 29 43;
+  --border: 35 43 61;
+  --text: 231 235 243;
+  --text-muted: 139 150 172;
+  --grid-line: rgba(231, 235, 243, 0.055);
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: rgb(var(--text) / 0.14);
+}
+
+/* visible keyboard focus, everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid rgb(231 179 62);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
