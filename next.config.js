@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "harshini-portfolio";
+const repoName = "portfolio";
 
 const nextConfig = {
   reactStrictMode: true,

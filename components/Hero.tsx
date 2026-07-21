@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { profile, stats } from "@/lib/data";
 
-const basePath = process.env.GITHUB_ACTIONS === "true" ? "/harshini-portfolio" : "";
+const basePath = process.env.GITHUB_ACTIONS === "true" ? "/portfolio" : "";
 
 export default function Hero() {
   return (
